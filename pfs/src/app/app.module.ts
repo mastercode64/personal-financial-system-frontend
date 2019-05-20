@@ -10,7 +10,7 @@ import { SigninComponent } from './signin/signin.component';
 import { AuthenticationService } from './_services/authentication.service';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { HomeComponent } from './home/home.component';
-import { ExpenseComponent } from './expense/expense/expense.component';
+import { ExpenseComponent } from './expense/expense.component';
 import { SigninAuthGuard } from './_guards/signin-auth.guard';
 import { TokenInterceptor } from './_helpers/token.interceptor';
 

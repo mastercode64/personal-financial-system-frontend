@@ -1,15 +1,5 @@
-<h1>Login</h1>
 
-
-<!-- <form>
-  <input type="text" placeholder="user" required autofocus id="user">
-  <input type="password" placeholder="password" required id="password">
-  <input type="submit" value="Sign in">
-  
-</form> -->
-
-
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+<!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
@@ -31,4 +21,21 @@
     </div>
 
     <p>{{ errorMessage }}</p>
+</form> -->
+
+
+<form class="form-signin" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+    <h1 class="h3 mb-3 font-weight-normal text-center">Personal Financial System</h1>
+
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" id="inputEmail" formControlName="username" class="form-control" placeholder="Email address" required autofocus>
+
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" formControlName="password" class="form-control" placeholder="Password" required>
+
+    <p *ngIf="errorMessage" class="text-danger text-center font-weight-normal">{{ errorMessage }}</p>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    
 </form>
