@@ -1,45 +1,34 @@
-<nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand">
-                  <img src="assets/img/ngx-bootstrap.svg" class="logo">
-                </a>
-                <span class="navbar-brand">Angular + Bootstrap</span>
-            </div>
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">
-                  Link <span class="sr-only">(current)</span>
-                </a></li>
-                <li><a href="#">Link</a></li>
-                <li class="dropdown" dropdown> <!-- {1} -->
-                    <a dropdownToggle role="button"> <!-- {2} -->
-                      Dropdown <span class="caret"></span></a>
-                    <ul *dropdownMenu class="dropdown-menu"> <!-- {3} -->
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+  <h1>{{ contentTitle }}</h1>
+</div>
 
-
-<h1>Expenses</h1>
-
-<table>
-  <tr>
-    <th>Creation date</th>
-    <th>Description</th>
-    <th>Value</th>
-  </tr>
-  <tr>
-    <td>123</td>
-    <td>teste</td>
-    <td>1000</td>
-  </tr>
-</table>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Data</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
