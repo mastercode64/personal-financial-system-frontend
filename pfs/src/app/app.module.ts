@@ -13,12 +13,13 @@ import { ExpenseComponent } from './expense/expense.component';
 import { SigninAuthGuard } from './_guards/signin-auth.guard';
 import { TokenInterceptor } from './_helpers/token.interceptor';
 import { DashboardModule } from './dashboard-layout/dashboard.module';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
-    ExpenseComponent
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

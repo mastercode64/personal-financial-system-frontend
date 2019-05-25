@@ -4,18 +4,22 @@ import { NavbarTopComponent } from './navbar-top/navbar-top.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { HomeComponent } from '../home/home.component';
 import { RouterModule } from '@angular/router';
+import { ExpenseComponent } from '../expense/expense.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
     declarations: [
         DashboardLayoutComponent,
         NavbarTopComponent,
         SidebarComponent,
-        HomeComponent
+        HomeComponent,
+        ExpenseComponent
     ],
-    imports:[
-        RouterModule
+    imports: [
+        RouterModule,
+        BrowserModule
     ]
 })
-export class DashboardModule{
+export class DashboardModule {
 
 }

@@ -6,11 +6,17 @@ import { ExpenseComponent } from './expense/expense.component';
 import { SigninAuthGuard } from './_guards/signin-auth.guard';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { HomeComponent } from './home/home.component';
+import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
   {
     path: 'login',
     component: SigninComponent,
+    canActivate: [SigninAuthGuard]
+  },
+  {
+    path: 'signup',
+    component: SignupComponent,
     canActivate: [SigninAuthGuard]
   },
   {
