@@ -12,7 +12,6 @@ import { ErrorInterceptor } from './_interceptors/error.interceptor';
 import { DashboardModule } from './dashboard-layout/dashboard.module';
 import { SigninComponent } from './views/signin/signin.component';
 import { SignupComponent } from './views/signup/signup.component';
-import { LoginComponent } from './views/login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
@@ -20,8 +19,7 @@ import { CommonModule } from '@angular/common';
   declarations: [
     AppComponent,
     SigninComponent,
-    SignupComponent,
-    LoginComponent
+    SignupComponent
   ],
   imports: [
     ReactiveFormsModule,

@@ -52,7 +52,7 @@ export class SigninComponent implements OnInit {
       .pipe(first())
       .subscribe(
         data => {
-          this.router.navigate(['home']);
+          this.router.navigate(['/home']);
         },
         error => {
           if (error.status == 401) {

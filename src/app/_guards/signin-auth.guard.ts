@@ -13,7 +13,7 @@ export class SigninAuthGuard implements CanActivate {
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
         if (this.tokenService.hasToken()) {
-            this.router.navigate(['home']);
+            this.router.navigate(['/home']);
             return false;
         }
         return true;

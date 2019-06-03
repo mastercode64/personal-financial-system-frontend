@@ -13,7 +13,7 @@ export class DashboardAuthGuard implements CanActivate {
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
         if (!this.tokenService.hasToken()) {
-            this.router.navigate(['login']);
+            this.router.navigate(['/signin']);
             return false;
         }
         return true;

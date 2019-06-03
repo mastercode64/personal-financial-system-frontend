@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { SigninComponent } from './views/signin/signin.component';
 import { SigninAuthGuard } from './_guards/signin-auth.guard';
-import { LoginComponent } from './views/login/login.component';
 import { SignupComponent } from './views/signup/signup.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { DashboardAuthGuard } from './_guards/dashboard-auth.guard';
@@ -11,13 +10,9 @@ import { ExpenseComponent } from './views/expense/expense.component';
 
 const routes: Routes = [
   {
-    path: 'login',
+    path: 'signin',
     component: SigninComponent,
     canActivate: [SigninAuthGuard]
-  },
-  {
-    path: 'teste',
-    component: LoginComponent
   },
   {
     path: 'signup',
