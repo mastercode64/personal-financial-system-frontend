@@ -6,8 +6,7 @@ import { AuthenticationService } from 'src/app/_services/authentication.service'
 
 @Component({
   selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+  templateUrl: './signin.component.html'
 })
 export class SigninComponent implements OnInit {
 
@@ -25,8 +24,8 @@ export class SigninComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      username: ['joao@gmail.com', Validators.required],
-      password: ['Senha123', Validators.required]
+      username: ['', Validators.required],
+      password: ['', Validators.required]
     });
 
     // reset login status
