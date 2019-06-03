@@ -1,18 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SigninComponent } from './signin/signin.component';
-import { DashboardAuthGuard } from './_guards/dashboard-auth.guard';
-import { ExpenseComponent } from './expense/expense.component';
+import { SigninComponent } from './views/signin/signin.component';
 import { SigninAuthGuard } from './_guards/signin-auth.guard';
+import { LoginComponent } from './views/login/login.component';
+import { SignupComponent } from './views/signup/signup.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
-import { HomeComponent } from './home/home.component';
-import { SignupComponent } from './signup/signup.component';
+import { DashboardAuthGuard } from './_guards/dashboard-auth.guard';
+import { HomeComponent } from './views/home/home.component';
+import { ExpenseComponent } from './views/expense/expense.component';
 
 const routes: Routes = [
   {
     path: 'login',
     component: SigninComponent,
     canActivate: [SigninAuthGuard]
+  },
+  {
+    path: 'teste',
+    component: LoginComponent
   },
   {
     path: 'signup',
@@ -22,7 +27,7 @@ const routes: Routes = [
   {
     path: '',
     component: DashboardLayoutComponent,
-    canActivate: [DashboardAuthGuard],    
+    canActivate: [DashboardAuthGuard],
     children: [
       {
         path: '',

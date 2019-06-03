@@ -7,7 +7,8 @@ export class SigninAuthGuard implements CanActivate {
 
     constructor(
         private router: Router,
-        private tokenService: TokenService) { }
+        private tokenService: TokenService
+    ) { }
 
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {

@@ -36,7 +36,7 @@ export class AuthenticationService {
         observe: "response",
         withCredentials: false
       })
-      .pipe(tap(res => {        
+      .pipe(tap(res => {
         const authToken = res.headers.get('Authorization');
         this.tokenService.setToken(authToken);
         return res;
