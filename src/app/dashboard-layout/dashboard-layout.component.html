@@ -1,14 +1,33 @@
-<nav navbarTopText='Personal financial system' class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow"  app-navbar-top>
-</nav>
+<div class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show">
 
-<div class="container-fluid">
-    <div class="row">
-
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar" app-sidebar>
-        </nav>
-
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">            
-            <router-outlet></router-outlet>
-        </main>
+    <div class="pace  pace-inactive pace-inactive">
+        <div class="pace-progress" data-progress-text="100%" data-progress="99" style="transform: translate3d(100%, 0px, 0px);">
+            <div class="pace-progress-inner"></div>
+        </div>
+        <div class="pace-activity"></div>
     </div>
+
+    <header app-navbar-top class="app-header navbar"></header>
+
+    <div class="app-body">
+        <div app-sidebar class="sidebar"></div>
+
+        <main class="main">
+            <ol app-breadcrumb class="breadcrumb"></ol>
+
+            <div class="container-fluid">
+                <div id="ui-view">
+                    <div>
+                        <div class="animated fadeIn">
+                            <router-outlet></router-outlet>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside app-aside-menu class="aside-menu"></aside>
+    </div>
+
+    <footer app-footer class="app-footer"></footer>
 </div>

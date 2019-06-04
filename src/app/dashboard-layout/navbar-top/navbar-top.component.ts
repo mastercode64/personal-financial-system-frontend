@@ -8,11 +8,10 @@ import { AuthenticationService } from 'src/app/_services/authentication.service'
 export class NavbarTopComponent {
     @Input()
     navbarTopText: string;
-    
+
     constructor(private authService: AuthenticationService) { }
 
-    ngOnInit() {
-    }
+    ngOnInit() { }
 
     logout() {
         this.authService.logout();
