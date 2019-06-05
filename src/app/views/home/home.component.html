@@ -1,60 +1,23 @@
 <div class="row">
-    <div class="col-sm-6 col-md-4">
-        <div class="card">
-            <div class="card-header">Card title</div>
-            <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat.</div>
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-        <div class="card">
-            <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat.</div>
-            <div class="card-footer">Card footer</div>
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
+    <div class="col-sm-12 col-xl-6">
         <div class="card">
             <div class="card-header">
-                <i class="fa fa-check"></i>Card with icon</div>
-            <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat.</div>
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-        <div class="card">
-            <div class="card-header">Card with switch
-                <label class="switch switch-sm switch-text switch-info float-right mb-0">
-                                    <input class="switch-input" type="checkbox">
-                                    <span class="switch-label" data-on="On" data-off="Off"></span>
-                                    <span class="switch-handle"></span>
-                                </label>
+                Bootstrap Collapse
+                <div class="card-header-actions">
+                    <a href="https://valor-software.com/ngx-bootstrap/#/collapse" target="_blank">
+                        <small classname="text-muted">docs</small>
+                    </a>
+                </div>
             </div>
-            <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat.</div>
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-        <div class="card">
-            <div class="card-header">Card with label
-                <span class="badge badge-success float-right">Success</span>
+            <div class="card-body" [collapse]="isCollapsed" [isAnimated]="true">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex
+                    ea commodo consequat.
+                </p>
             </div>
-            <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat.</div>
-        </div>
-    </div>
-
-    <div class="col-sm-6 col-md-4">
-        <div class="card">
-            <div class="card-header">Card with label
-                <span class="badge badge-pill badge-danger float-right">42</span>
+            <div class="card-footer">
+                <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed">Toggle collapse</button>
             </div>
-            <div class="card-body">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat.</div>
         </div>
     </div>
 

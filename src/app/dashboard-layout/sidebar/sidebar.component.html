@@ -1,39 +1,17 @@
-<!-- <div class="sidebar-sticky">
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link active" [routerLink]="['/home']">
-                <span data-feather="home"></span>
-                Dashboard <span class="sr-only">(current)</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/expenses']">
-                <span data-feather="file"></span>
-                Despesas
-            </a>
-        </li>
-        
-    </ul>
-
-</div> -->
-
-
-
 <nav class="sidebar-nav ps ps--active-y">
     <ul class="nav">
+        <!-- <li class="nav-title">Theme</li> -->
 
         <li class="nav-item">
-            <a class="nav-link active" href="/">
-                <i class="nav-icon icon-speedometer"></i> Dashboard
-                <span class="badge badge-info">NEW</span>
+            <a class="nav-link" [routerLink]="['/home']">
+                <i class="nav-icon fa fa-home"></i> Home
             </a>
         </li>
 
-        <li class="nav-title">Theme</li>
-
         <li class="nav-item">
-            <a class="nav-link" href="colors.html">
-                <i class="nav-icon icon-drop"></i> Colors</a>
+            <a class="nav-link" [routerLink]="['/expenses']">
+                <i class="nav-icon fa fa-credit-card"></i> Expenses
+            </a>
         </li>
 
     </ul>
