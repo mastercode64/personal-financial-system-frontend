@@ -10,9 +10,10 @@ export class ErrorInterceptor implements HttpInterceptor {
 
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         return next.handle(request).pipe(catchError(err => {
-            let isLoginRequest = request.url.endsWith('/signin');
+            let isLoginRequest: boolean = request.url.endsWith('/signin');
+            let isSignupRequest: boolean = request.url.endsWith('/signup');
 
-            if (err.status === 401 && !isLoginRequest) {
+            if (err.status === 401 && !isLoginRequest && !isSignupRequest) {
                 this.authService.logout();
             }
             return next.handle(request);
