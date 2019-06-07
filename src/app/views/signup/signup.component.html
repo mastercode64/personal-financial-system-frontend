@@ -10,6 +10,17 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                      <i class="icon-user"></i>
+                                    </span>
+                                </div>
+                                <input [ngClass]="{'is-invalid': !!f.name.errors && (f.name.dirty || f.name.touched)}" formControlName="name" class="form-control" type="text" placeholder="Name">
+                                <em *ngIf="f.name.errors?.required" class="error invalid-feedback">Name is required</em>
+                                <em *ngIf="f.name.errors?.minlength" class="error invalid-feedback">Name be at least 1 character</em>
+                            </div>
+
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
                                     <span class="input-group-text">@</span>
                                 </div>
                                 <input [ngClass]="{'is-invalid': !!f.email.errors && (f.email.dirty || f.email.touched)}" formControlName="email" class="form-control" type="email" placeholder="Email">
@@ -26,6 +37,7 @@
                                 <input [ngClass]="{'is-invalid': !!f.password.errors && (f.password.dirty || f.password.touched)}" formControlName="password" class="form-control" type="password" placeholder="Password">
                                 <em *ngIf="f.password.errors?.required" class="error invalid-feedback">Password is required</em>
                                 <em *ngIf="f.password.errors?.minlength" class="error invalid-feedback">Password must be at least 6 characters</em>
+                                <em *ngIf="f.password.errors?.maxlength" class="error invalid-feedback">Password must contain 25 or less characters</em>
                             </div>
 
                             <div class="input-group mb-4">
