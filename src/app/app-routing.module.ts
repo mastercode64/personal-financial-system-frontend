@@ -6,7 +6,6 @@ import { SignupComponent } from './views/signup/signup.component';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { DashboardAuthGuard } from './_guards/dashboard-auth.guard';
 import { HomeComponent } from './views/home/home.component';
-import { ExpenseComponent } from './views/expense/expense.component';
 
 const routes: Routes = [
   {
@@ -35,7 +34,7 @@ const routes: Routes = [
       },
       {
         path: 'expenses',
-        component: ExpenseComponent
+        loadChildren: './views/expense/expense.module#ExpenseModule'
       }
     ]
   }

@@ -1,15 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Expense } from './expense';
+import { Expense } from '../expense';
 
 
 const apiUrl = 'http://localhost:8080/expenses';
 
 @Component({
-  templateUrl: './expense.component.html',
-  styleUrls: ['./expense.component.css']
+  templateUrl: './expense-list.component.html'
 })
-export class ExpenseComponent implements OnInit {
+export class ExpenseListComponent implements OnInit {
 
   contentTitle: string = 'Despesas';
 
