@@ -9,9 +9,7 @@ const apiUrl = 'http://localhost:8080/expenses';
   templateUrl: './expense-list.component.html'
 })
 export class ExpenseListComponent implements OnInit {
-
-  contentTitle: string = 'Despesas';
-
+  
   expenseList: any[] = [];
 
   constructor(
